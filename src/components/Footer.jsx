@@ -6,6 +6,9 @@ import {
   FaInstagram,
   FaTwitterSquare,
 } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
+
 
 const Footer = () => {
   return (
@@ -14,10 +17,27 @@ const Footer = () => {
         <h1 className='w-full text-3xl font-bold text-[#38b6ff]'>Webchild</h1>
         <p className='py-4'>Avec webchild, soyez le designer, l'artiste, le createur de vos produits.</p>
         <div className='flex justify-between md:w-[75%] my-6'>
-            <FaFacebookSquare size={30} />
-            <FaInstagram size={30} />
-            <FaTwitterSquare size={30} />
-            <FaGithubSquare size={30} />
+            
+            
+            <a
+            href="https://wa.me/221764757340"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-500"
+        >
+            <FaWhatsapp size={30} />
+        </a>
+
+        <a
+            href="mailto:yvesmanga@proton.me"
+            className="text-red-500"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <SiGmail size={30} />
+        </a>
+
+
           
         </div>
       </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { ReactTyped } from "react-typed";
+import { Link } from 'react-router-dom';
+
 
 const Hero = () => {
   return (
@@ -24,7 +26,10 @@ const Hero = () => {
           />
         </div>
         <p className='md:text-2xl text-xl font-bold text-gray-500'>Laissez-vous, seduire et guider par l'univers de Webchild.</p>
-        <button className='bg-[#38b6ff] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Commencer</button>
+        
+        <Link to="/services" className='p-4'>
+          <button className='bg-[#38b6ff] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Commencer</button>
+        </Link>
       </div>
     </div>
   );

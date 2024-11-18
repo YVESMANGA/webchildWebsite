@@ -1,18 +1,43 @@
 import React from 'react';
-import Services from './components/Services';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
+import ServicesPages from './components/ServicesPages';
+import Home from './components/Home';
 import Navbar from './components/Navbar';
-import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
+import WebsiteP from './components/WebsiteP';
+import LogosP from './components/LogosP';
+import FlyersP from './components/FlyersP';
+import About from './components/About';
+
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <Services />
-      <Newsletter />
-      <Footer />
+
+      <Router>
+        <Navbar/>
+        <Routes>
+          
+          <Route path="/" element={<Home />} />
+          
+
+          <Route path="/services" element={<ServicesPages />} />
+          <Route path="/website" element={<WebsiteP />} />
+          <Route path="/logos" element={<LogosP />} />
+          <Route path="/flyers" element={<FlyersP />} />
+          <Route path="/About" element={<About />} />
+
+
+
+
+        </Routes>
+        <Footer/>
+
+      </Router>
+
+     
     </div>
   );
 }
